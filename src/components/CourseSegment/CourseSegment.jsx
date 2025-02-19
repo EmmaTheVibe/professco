@@ -1,10 +1,12 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./CourseSegment.module.css";
 import { courseTabs } from "../../utils/data";
 import CourseList from "../CourseList/CourseList";
+import PropTypes from "prop-types";
+import useContexts from "../../utils/useContexts";
 
-export default function CourseSegment() {
-  const [activeTab, setactiveTab] = useState(courseTabs[0]);
+export default function CourseSegment({ showAll = false }) {
+  const { activeTab, setActiveTab } = useContexts();
 
   const sliderRef = useRef(null);
   const navRefs = useRef([]);
@@ -18,7 +20,7 @@ export default function CourseSegment() {
   }, [activeTab]);
 
   const handleClick = (tab) => {
-    setactiveTab(tab);
+    setActiveTab(tab);
   };
 
   return (
@@ -44,7 +46,11 @@ export default function CourseSegment() {
           </div>
         </div>
       </div>
-      <CourseList activeTab={activeTab} showAll={false} />
+      <CourseList showAll={showAll} />
     </div>
   );
 }
+
+CourseSegment.propTypes = {
+  showAll: PropTypes.bool.isRequired,
+};

@@ -9,10 +9,11 @@ import styles from "./HomePage.module.css";
 import Faqs from "../../../components/Faqs/Faqs";
 import GuideCard from "../../../components/GuideCard/GuideCard";
 import Footer from "../../../components/Footer/Footer";
+import { NavLink } from "react-router-dom";
 
 export default function HomePage() {
   return (
-    <section style={{ paddingTop: "142px" }}>
+    <section className={styles.homepage}>
       <HomeNav />
 
       <div className="container">
@@ -25,9 +26,11 @@ export default function HomePage() {
             certification from top education providers (from around the world).
             Learn with Professco today!
           </p>
-          <Button type="filled" width="270px">
-            <p>Explore our courses</p>
-          </Button>
+          <NavLink to="/courses">
+            <Button type="filled" width="270px">
+              <p>Explore our courses</p>
+            </Button>
+          </NavLink>
         </div>
       </div>
 
@@ -105,17 +108,19 @@ export default function HomePage() {
                 <Button type="filled">
                   <p>Get started</p>
                 </Button>
-                <Button type="bare" width="242px">
-                  <p>Explore courses</p>
-                  <img
-                    src={media.plus}
-                    alt="plus"
-                    style={{
-                      marginLeft: "10px",
-                      transform: "translateY(1px)",
-                    }}
-                  />
-                </Button>
+                <NavLink to="/courses">
+                  <Button type="bare" width="242px">
+                    <p>Explore courses</p>
+                    <img
+                      src={media.plus}
+                      alt="plus"
+                      style={{
+                        marginLeft: "10px",
+                        transform: "translateY(1px)",
+                      }}
+                    />
+                  </Button>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -148,17 +153,19 @@ export default function HomePage() {
               <Button type="filled" width="134px">
                 <p>Get started</p>
               </Button>
-              <Button type="bare" width="180px">
-                <p>Explore courses</p>
-                <img
-                  src={media.plus}
-                  alt="plus"
-                  style={{
-                    marginLeft: "10px",
-                    transform: "translateY(1px)",
-                  }}
-                />
-              </Button>
+              <NavLink to="/courses">
+                <Button type="bare" width="180px">
+                  <p>Explore courses</p>
+                  <img
+                    src={media.plus}
+                    alt="plus"
+                    style={{
+                      marginLeft: "10px",
+                      transform: "translateY(1px)",
+                    }}
+                  />
+                </Button>
+              </NavLink>
             </div>
             <div className={styles.reviewGrid}>
               {[...Array(4)].map((_, index) => (

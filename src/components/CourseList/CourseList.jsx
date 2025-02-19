@@ -5,9 +5,13 @@ import { coursesData } from "../../utils/data";
 import styles from "./CourseList.module.css";
 import PropTypes from "prop-types";
 import SearchBar from "../SearchBar/SearchBar";
+import useContexts from "../../utils/useContexts";
+import { NavLink } from "react-router-dom";
 
-export default function CourseList({ activeTab, showAll = true }) {
+export default function CourseList({ showAll }) {
+  const { activeTab } = useContexts();
   const [query, setQuery] = useState("");
+
   let filteredCourses = coursesData.filter((course) =>
     course.courseType.includes(activeTab.name)
   );
@@ -26,7 +30,7 @@ export default function CourseList({ activeTab, showAll = true }) {
 
   return (
     <div className={styles.courseList}>
-      <div className={styles.top}>
+      <div className={styles.top} style={{ borderBottom: showAll && "none" }}>
         <div className={`container ${styles.wrapper}`}>
           <p>Courses</p>
           <h1 className={styles.heading}>
@@ -36,18 +40,32 @@ export default function CourseList({ activeTab, showAll = true }) {
             Learn from vetted and certified chartered professionals with proven
             track records
           </p>
-          <Button type="filled" width="201px">
-            <p>View all</p>
-          </Button>
+          {!showAll ? (
+            <NavLink to="/courses">
+              <Button type="filled" width="201px">
+                <p>View all</p>
+              </Button>
+            </NavLink>
+          ) : (
+            ""
+          )}
         </div>
       </div>
       <div className={styles.bottom}>
-        <div className={`container ${styles.gridWrapper}`}>
+        <div
+          className={`container ${styles.gridWrapper}`}
+          style={{ paddingTop: showAll && "0" }}
+        >
           {showAll ? (
-            <div>
-              <SearchBar query={query} setQuery={setQuery} width="288" />
+            <div className={styles.filterBox}>
+              <div style={{ marginBottom: "12px" }}>
+                <SearchBar query={query} setQuery={setQuery} width="288" />
+              </div>
+
               {query.length > 0 ? (
-                <p>Found {searchedCourses.length} results</p>
+                <p style={{ marginBottom: "12px" }}>
+                  Found {searchedCourses.length} results
+                </p>
               ) : (
                 ""
               )}
@@ -67,6 +85,5 @@ export default function CourseList({ activeTab, showAll = true }) {
 }
 
 CourseList.propTypes = {
-  activeTab: PropTypes.object.isRequired,
   showAll: PropTypes.bool.isRequired,
 };

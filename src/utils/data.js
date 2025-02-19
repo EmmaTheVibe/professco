@@ -697,14 +697,110 @@ const coursesData = [
 ];
 
 const courseTabs = [
-  { id: 0, name: "ICAN" },
-  { id: 1, name: "ACCA" },
-  { id: 2, name: "CFA" },
-  { id: 3, name: "CIMA" },
-  { id: 4, name: "CITN" },
-  { id: 5, name: "CIS" },
-  { id: 6, name: "ATS" },
-  { id: 7, name: "CIPM" },
+  {
+    id: 0,
+    name: "ICAN",
+    logo: "./images/icanlogo.svg",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    segments: [
+      "Strategic Financial Management",
+      "Advanced Audit & Assurance",
+      "Advanced Taxation",
+      "Business & Finance",
+      "Performance Management",
+    ],
+  },
+  {
+    id: 1,
+    name: "ACCA",
+    logo: "./images/icanlogo.svg",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    segments: [
+      "Financial Management",
+      "Accounting Law",
+      "Financial Management",
+      "Taxation",
+      "Business Analysis",
+    ],
+  },
+  {
+    id: 2,
+    name: "CFA",
+    logo: "./images/icanlogo.svg",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    segments: [
+      "Economics",
+      "Corporate Issuers",
+      "Quantitative Methods",
+      "Financial Statement Analysis",
+      "Equity Investments",
+    ],
+  },
+  {
+    id: 3,
+    name: "CIMA",
+    logo: "./images/icanlogo.svg",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    segments: [
+      "Strategic Management",
+      "Risk Management",
+      "Financial Reporting",
+      "Fundamentals Of Financial Accounting",
+      "Operational Case Study",
+    ],
+  },
+  {
+    id: 4,
+    name: "CITN",
+    logo: "./images/icanlogo.svg",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    segments: [
+      "Tax Administration & Management",
+      "Tax Audit & Investigation",
+      "Oil & Gas Taxation",
+      "Applied Taxation",
+      "Taxation Law",
+    ],
+  },
+  {
+    id: 5,
+    name: "CIS",
+    logo: "./images/icanlogo.svg",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    segments: [
+      "Derive Valuation & Analysis",
+      "Portfolio Management",
+      "Ethics & Professional Standards",
+      "Financial Accounting & Financial Statement Analysis",
+      "Economics & Financial Markets",
+    ],
+  },
+  {
+    id: 6,
+    name: "ATS",
+    logo: "./images/icanlogo.svg",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    segments: [
+      "Basic Accounting Processes & Systems",
+      "Business Law",
+      "Communication Skills",
+      "Public Sector Accounting",
+      "Information Technology",
+    ],
+  },
+  {
+    id: 7,
+    name: "CIPM",
+    logo: "./images/icanlogo.svg",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    segments: [
+      "Operations Research",
+      "Advanced Human Resource Management",
+      "Insurance & Pensions",
+      "Organizational Behaviour & Performance",
+      "Workplace Planning & Strategies",
+    ],
+  },
 ];
 
 const notifs = [

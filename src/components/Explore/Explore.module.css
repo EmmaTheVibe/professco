@@ -1,0 +1,38 @@
+.explore h1 {
+  font-size: 30px;
+  line-height: 38px;
+  margin: 16px 0;
+}
+.examGrid {
+  width: 320px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 27px;
+  margin: 32px 0 100px;
+}
+.seg {
+  background-color: rgba(203, 213, 225, 0.1);
+  padding: 85px 0;
+}
+.seg h2 {
+  font-size: 24px;
+  line-height: 32px;
+}
+.segGrid {
+  width: 100%;
+  margin-top: 51px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 44px;
+}
+.heading,
+.topic {
+  font-size: 14px;
+  line-height: 20px;
+}
+.heading {
+  margin-bottom: 16px;
+}
+.topic {
+  margin-bottom: 8px;
+}
