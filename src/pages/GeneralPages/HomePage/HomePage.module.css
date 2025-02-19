@@ -1,0 +1,227 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  width: 300px;
+  font-size: 48px;
+  line-height: 54px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.desc {
+  text-align: center;
+  width: 300px;
+  margin-bottom: 48px;
+}
+.seg,
+.segB,
+.segD {
+  padding: 96px 0 130px;
+}
+.frame,
+.frameB {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frame h1 {
+  font-size: 36px;
+  line-height: 44px;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 22px;
+}
+.frame span {
+  color: #359944;
+}
+.frame h3 {
+  color: #1f2937;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  margin-bottom: 22px;
+}
+.frame .txt {
+  width: 306px;
+  text-align: center;
+  margin-bottom: 56px;
+  color: #1f2937;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  position: relative;
+  width: 245.82px;
+  height: 163.72px;
+}
+.lecturer1 {
+  width: inherit;
+  height: inherit;
+}
+.award {
+  position: absolute;
+  bottom: -24px;
+  left: -16px;
+}
+.notifBox {
+  position: absolute;
+  z-index: 1;
+  bottom: -22px;
+  right: 4px;
+}
+
+.segB {
+  background-color: #091b34;
+}
+.medalbg {
+  width: 154.71px;
+  height: 294px;
+  margin-bottom: 46px;
+}
+.pagesthick {
+  position: absolute;
+  width: 296px;
+  height: 194.2px;
+}
+.frameB {
+  color: #ffffff;
+}
+.frameB h1 {
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 22px;
+}
+.frameB .txt {
+  width: 276px;
+  margin-bottom: 34px;
+}
+
+.segC {
+  background-color: #061223;
+  padding: 29px 0;
+}
+.segCWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+.segCFrame {
+  display: flex;
+  justify-content: space-between;
+  width: 262.53px;
+  align-items: center;
+  color: #ffffff;
+}
+.segCWrapper img {
+  width: 123.53px;
+  height: 52.01px;
+}
+.segCWrapper h3 {
+  font-size: 14.4px;
+  line-height: 18.14px;
+}
+.segCWrapper p {
+  font-size: 12px;
+  line-height: 18px;
+  width: 123px;
+}
+
+.segDFrame {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #1f2937;
+  /* align-items: center; */
+}
+.segDFrame h1 {
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 22px;
+}
+.segDFrame .txt {
+  margin-bottom: 42px;
+}
+.btnPackB {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.reviewGrid {
+  width: 289px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 32px;
+  margin-top: 76px;
+}
+
+.segE {
+  background-color: #fffbf5;
+  padding: 61px 0 88px;
+  overflow: hidden;
+}
+.segEFrame {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #1f2937;
+}
+.segEFrame h1 {
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 22px;
+}
+.segEFrame .txt {
+  margin-bottom: 42px;
+  width: 254px;
+}
+.greencurve,
+.yellowarch {
+  position: absolute;
+}
+.greencurve {
+  top: 0;
+  right: -10px;
+}
+.yellowarch {
+  bottom: 0;
+}
+
+.segF {
+  padding: 96px 0 120px;
+}
+.segFWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.segFWrapper h1 {
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+}
+.segFWrapper .txt {
+  text-align: center;
+}
+.segFWrapper .txt:nth-of-type(2) {
+  width: 295px;
+  margin-bottom: 24px;
+}
+.guides {
+  margin-top: 94px;
+}
+
+.guides {
+  width: 295px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 53px;
+}

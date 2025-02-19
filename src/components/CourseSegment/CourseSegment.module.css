@@ -1,0 +1,59 @@
+.courseSegment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  /* border-bottom: 1px solid #d1d5db; */
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.courseNav {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+}
+.courseNav::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs {
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.tabItem {
+  margin: 0px 10px;
+  padding: 0px 10px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  color: #9ca3af;
+  font-weight: 600;
+}
+.activeTabItem {
+  color: #1f2937;
+}
+
+.slider {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  background-color: #e65539;
+  transition: all 0.3s ease;
+}

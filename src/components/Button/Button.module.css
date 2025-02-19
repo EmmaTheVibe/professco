@@ -1,0 +1,30 @@
+.btn {
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+}
+/* .btn p {
+  line-height: unset;
+} */
+
+.filled {
+  background-color: #e65539;
+  color: #fff;
+  border: none;
+}
+
+.outlined {
+  background-color: none;
+  border: 1.6px solid #e65539;
+  color: #e65539;
+}
+
+.bare {
+  background-color: none;
+  border: none;
+  color: #e65539;
+}

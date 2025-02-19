@@ -1,0 +1,41 @@
+.notifs {
+  position: relative;
+  width: fit-content;
+}
+.chip {
+  position: absolute;
+  right: -7px;
+  top: -5.9px;
+  z-index: -1;
+}
+.notif {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 141.65px;
+  height: 26.96px;
+  border-radius: 3.84px;
+  margin-bottom: 3.2px;
+  padding: 10px;
+}
+.push {
+  transform: translateX(32px);
+  box-shadow: 30px 2px 30px 1px rgba(29, 32, 37, 0.1);
+}
+.third {
+  box-shadow: 17px 9px 30px 1px rgba(29, 32, 37, 0.2);
+}
+.circle {
+  width: 11.52px;
+  height: 11.52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3px;
+}
+.circle img {
+  width: 10px;
+  height: 4.27px;
+  transform: translateX(-0.3px);
+}

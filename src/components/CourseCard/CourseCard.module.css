@@ -1,0 +1,73 @@
+.courseCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.preview {
+  width: 100%;
+}
+.thumbnail {
+  width: 100%;
+}
+.courseInfo {
+  padding: 14px;
+}
+.courseTitle {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.courseType {
+  width: 69px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebfff3;
+  color: #00903b;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.courseType p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.blackstar {
+  width: 13.28px;
+  height: 12.54px;
+  margin-right: 3px;
+}
+.courseDesc {
+  color: #6b6f80;
+  font-size: 14px;
+  line-height: 20px;
+}
+.tags {
+  display: flex;
+  margin: 14px 0 16px;
+}
+.tag {
+  margin-right: 4px;
+  border-radius: 2px;
+  padding: 4px 8px;
+}
+.tag p {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #1f2937;
+}
+.cart {
+  height: 20px;
+  width: 19.89px;
+  margin-left: 10px;
+}

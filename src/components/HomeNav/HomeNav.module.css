@@ -1,0 +1,10 @@
+.homenav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.logo {
+  transform: translateX(-3.4px);
+}

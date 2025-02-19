@@ -1,0 +1,66 @@
+.footer {
+  background-color: #061223;
+  padding: 96px 0;
+  color: #f9fafb;
+}
+.paperbox {
+  position: relative;
+  margin-bottom: 126px;
+}
+.notifbox {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  z-index: 3;
+}
+.pages {
+  width: 249.11px;
+  height: 165.73px;
+}
+
+.divider {
+  width: 100%;
+  border: 1.2px solid #374151;
+  margin: 96px 0;
+}
+
+.txt {
+  font-size: 14px;
+  line-height: 16px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.row p {
+  font-size: 14px;
+  line-height: 16px;
+}
+.row:last-of-type {
+  margin-bottom: 0;
+}
+.row img {
+  margin-right: 6px;
+}
+
+.table {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 64px;
+}
+.table p {
+  width: fit-content;
+}
+.tab {
+  font-size: 14px;
+  line-height: 16.41px;
+  margin-bottom: 20px;
+}
+.tabHead {
+  font-size: 18px;
+  line-height: 21.09px;
+  margin-bottom: 22px;
+}

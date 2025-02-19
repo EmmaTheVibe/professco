@@ -1,0 +1,42 @@
+.courseList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.top,
+.bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.wrapper {
+  padding: 36px 30px 56px;
+}
+.gridWrapper {
+  padding: 36px 0 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  font-size: 30px;
+  line-height: 38px;
+  margin: 12px 0 14px;
+}
+.moreInfo {
+  margin-bottom: 30px;
+}
+
+.courseGrid {
+  width: 288px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
