@@ -31,7 +31,7 @@ export default function CoursePage() {
               <div
                 style={{
                   display: "flex",
-                  height: "30px",
+                  // height: "30px",
                   alignItems: "center",
                 }}
               >
