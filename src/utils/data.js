@@ -4,7 +4,7 @@ const media = {
   menu: "/images/menu.svg",
   closer: "/images/closer.svg",
   arrowdown: "/images/arrowdown.svg",
-  arrowright: "/images/arrowright.svg",
+  arrowright: "/images/arrowright2.svg",
   blackstar: "/images/blackstar.svg",
   greenstar: "/images/greenstar.svg",
   fullStar: "/images/ratingstarfull.svg",

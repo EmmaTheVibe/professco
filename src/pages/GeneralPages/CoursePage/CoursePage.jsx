@@ -42,8 +42,8 @@ export default function CoursePage() {
                   style={{
                     margin: "0 14px",
                     // border: "1px solid red",
-                    width: "13.5px",
-                    height: "13.5px",
+                    // width: "13.5px",
+                    // height: "13.5px",
                   }}
                 />
                 <p>{course.courseType}</p>
@@ -53,8 +53,8 @@ export default function CoursePage() {
                   style={{
                     margin: "0 14px",
                     // border: "1px solid red",
-                    width: "13.5px",
-                    height: "13.5px",
+                    // width: "13.5px",
+                    // height: "13.5px",
                   }}
                 />
                 <p className="semiboldFont">Fundamentals</p>
