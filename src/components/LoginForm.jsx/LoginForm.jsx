@@ -48,7 +48,7 @@ export default function LoginForm() {
         </div>
       </div>
       <Button type="filled">
-        <p>Create Professco Account</p>
+        <p>Login</p>
       </Button>
       <button className={styles.google}>
         <p className="semiboldFont">Use Google Instead</p>
