@@ -42,9 +42,11 @@ export default function CourseList({ showAll }) {
           </p>
           {!showAll ? (
             <NavLink to="/courses">
-              <Button type="filled" width="201px">
-                <p>View all</p>
-              </Button>
+              <div className={styles.btn}>
+                <Button type="filled">
+                  <p>View all</p>
+                </Button>
+              </div>
             </NavLink>
           ) : (
             ""
@@ -59,7 +61,7 @@ export default function CourseList({ showAll }) {
           {showAll ? (
             <div className={styles.filterBox}>
               <div style={{ marginBottom: "12px" }}>
-                <SearchBar query={query} setQuery={setQuery} width="288" />
+                <SearchBar query={query} setQuery={setQuery} width="288px" />
               </div>
 
               {query.length > 0 ? (

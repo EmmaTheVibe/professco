@@ -2,8 +2,18 @@ import styles from "./CourseCard.module.css";
 import PropTypes from "prop-types";
 import { media } from "../../utils/data";
 import Button from "../Button/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function CourseCard({ courseItem }) {
+  const navigate = useNavigate();
+
+  const courseTypeUrl = courseItem.courseType.toLowerCase();
+  const courseTitleUrl = courseItem.courseTitle.toLowerCase();
+
+  const handleBtn = () => {
+    navigate(`/courses/${courseTypeUrl}/${courseTitleUrl}#${courseItem.id}`);
+  };
+
   return (
     <div className={styles.courseCard}>
       <div className={styles.preview}>
@@ -21,7 +31,8 @@ export default function CourseCard({ courseItem }) {
         <div className={styles.rating}>
           <img src={media.blackstar} alt="star" className={styles.blackstar} />
           <p style={{ fontSize: "14px", lineHeight: "20px" }}>
-            {courseItem.courseRating}
+            {courseItem.courseRating} ({courseItem.noOfReviews} review
+            {courseItem.noOfReviews !== 1 && "s"})
           </p>
         </div>
         <p className={styles.courseDesc}>{courseItem.courseDesc}</p>
@@ -36,10 +47,12 @@ export default function CourseCard({ courseItem }) {
             </div>
           ))}
         </div>
-        <Button type="outlined" height="40" width="256px">
-          <p>Purchase course</p>{" "}
-          <img src={media.cart} alt="cart" className={styles.cart} />
-        </Button>
+        <div className={styles.btn}>
+          <Button type="outlined" height="40" onClick={handleBtn}>
+            <p>Purchase course</p>{" "}
+            <img src={media.cart} alt="cart" className={styles.cart} />
+          </Button>
+        </div>
       </div>
     </div>
   );

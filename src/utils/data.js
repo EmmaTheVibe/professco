@@ -1,40 +1,47 @@
 const media = {
-  logo: "./images/logo.svg",
-  search: "./images/search.svg",
-  menu: "./images/menu.svg",
-  arrowdown: "./images/arrowdown.svg",
-  blackstar: "./images/blackstar.svg",
-  greenstar: "./images/greenstar.svg",
-  cart: "./images/cart.svg",
-  lecturer1: "./images/lecturer1.png",
-  award: "./images/award.svg",
-  blacktick: "./images/blacktick.svg",
-  whitetick: "./images/whitetick.svg",
-  chip: "./images/chip.svg",
-  medalbg: "./images/medalbg.svg",
-  pagesthick: "./images/pagesthick.png",
-  pagesthin: "./images/pagesthin.png",
-  plus: "./images/plus.svg",
-  avatargrp: "./images/avatargrp.png",
-  reviewavatar: "./images/reviewavatar.svg",
-  yellowarch: "./images/yellowarch.svg",
-  greencurve: "./images/greencurve.svg",
-  carouselphoto: "./images/carouselphoto.png",
-  cardmedal: "./images/cardmedal.svg",
-  faqarrow: "./images/faqarrow.svg",
-  formarrow: "./images/formarrow.svg",
-  tel: "./images/tel.svg",
-  mail: "./images/sms.svg",
-  location: "./images/location.svg",
+  logo: "/images/logo.svg",
+  search: "/images/search.svg",
+  menu: "/images/menu.svg",
+  closer: "/images/closer.svg",
+  arrowdown: "/images/arrowdown.svg",
+  arrowright: "/images/arrowright.svg",
+  blackstar: "/images/blackstar.svg",
+  greenstar: "/images/greenstar.svg",
+  fullStar: "/images/ratingstarfull.svg",
+  halfStar: "/images/ratingstarhalf.svg",
+  emptyStar: "/images/ratingstarempty.svg",
+  cart: "/images/cart.svg",
+  lecturer1: "/images/lecturer1.png",
+  award: "/images/award.svg",
+  blacktick: "/images/blacktick.svg",
+  whitetick: "/images/whitetick.svg",
+  chip: "/images/chip.svg",
+  medalbg: "/images/medalbg.svg",
+  pagesthick: "/images/pagesthick.png",
+  pagesthin: "/images/pagesthin.png",
+  plus: "/images/plus.svg",
+  avatargrp: "/images/avatargrp.png",
+  reviewavatar: "/images/reviewavatar.svg",
+  yellowarch: "/images/yellowarch.svg",
+  greencurve: "/images/greencurve.svg",
+  carouselphoto: "/images/carouselphoto.png",
+  cardmedal: "/images/cardmedal.svg",
+  faqarrow: "/images/faqarrow.svg",
+  formarrow: "/images/formarrow.svg",
+  tel: "/images/tel.svg",
+  mail: "/images/sms.svg",
+  location: "/images/location.svg",
+  coursebanner: "/images/courseThumbnail2.png",
 };
 
 const coursesData = [
   {
     id: 1,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA1 Fundamentals of Business Economics",
     courseType: "ICAN",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 2.8,
+    noOfReviews: 1,
     courseDesc:
       "What you’ll learn: Microeconomic and Institutional Context of Business...",
     courseTags: [
@@ -45,10 +52,11 @@ const coursesData = [
   },
   {
     id: 2,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA2 Fundamentals of Business Economics",
     courseType: "ICAN",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 3.5,
+    noOfReviews: 10,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -58,10 +66,11 @@ const coursesData = [
   },
   {
     id: 3,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA3 Fundamentals of Business Economics",
     courseType: "ICAN",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -71,10 +80,11 @@ const coursesData = [
   },
   {
     id: 4,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA4 Fundamentals of Business Economics",
     courseType: "ICAN",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -85,10 +95,11 @@ const coursesData = [
   },
   {
     id: 5,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA5 Fundamentals of Business Economics",
     courseType: "ICAN",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -98,10 +109,11 @@ const coursesData = [
   },
   {
     id: 6,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA6 Fundamentals of Business Economics",
     courseType: "ICAN",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -112,10 +124,11 @@ const coursesData = [
   },
   {
     id: 7,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA7 Fundamentals of Business Economics",
     courseType: "ACCA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -126,10 +139,11 @@ const coursesData = [
   },
   {
     id: 8,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA8 Fundamentals of Business Economics",
     courseType: "ACCA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -140,10 +154,11 @@ const coursesData = [
   },
   {
     id: 9,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "ACCA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -154,10 +169,11 @@ const coursesData = [
   },
   {
     id: 10,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "ACCA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -168,10 +184,11 @@ const coursesData = [
   },
   {
     id: 11,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "ACCA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -182,10 +199,11 @@ const coursesData = [
   },
   {
     id: 12,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "ACCA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -196,10 +214,11 @@ const coursesData = [
   },
   {
     id: 13,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CFA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -210,10 +229,11 @@ const coursesData = [
   },
   {
     id: 14,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CFA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -224,10 +244,11 @@ const coursesData = [
   },
   {
     id: 15,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CFA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -238,10 +259,11 @@ const coursesData = [
   },
   {
     id: 16,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CFA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -252,10 +274,11 @@ const coursesData = [
   },
   {
     id: 17,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CFA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -266,10 +289,11 @@ const coursesData = [
   },
   {
     id: 18,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CFA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -280,10 +304,11 @@ const coursesData = [
   },
   {
     id: 19,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIMA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -294,10 +319,11 @@ const coursesData = [
   },
   {
     id: 20,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIMA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -308,10 +334,11 @@ const coursesData = [
   },
   {
     id: 21,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIMA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -322,10 +349,11 @@ const coursesData = [
   },
   {
     id: 22,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIMA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -336,10 +364,11 @@ const coursesData = [
   },
   {
     id: 23,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIMA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -350,10 +379,11 @@ const coursesData = [
   },
   {
     id: 24,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIMA",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -364,10 +394,11 @@ const coursesData = [
   },
   {
     id: 25,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CITN",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -378,10 +409,11 @@ const coursesData = [
   },
   {
     id: 26,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CITN",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -392,10 +424,11 @@ const coursesData = [
   },
   {
     id: 27,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CITN",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -406,10 +439,11 @@ const coursesData = [
   },
   {
     id: 28,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CITN",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -420,10 +454,11 @@ const coursesData = [
   },
   {
     id: 29,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CITN",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -434,10 +469,11 @@ const coursesData = [
   },
   {
     id: 30,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CITN",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -448,10 +484,11 @@ const coursesData = [
   },
   {
     id: 31,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIS",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -462,10 +499,11 @@ const coursesData = [
   },
   {
     id: 32,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIS",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -476,10 +514,11 @@ const coursesData = [
   },
   {
     id: 33,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIS",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -490,10 +529,11 @@ const coursesData = [
   },
   {
     id: 34,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIS",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -504,10 +544,11 @@ const coursesData = [
   },
   {
     id: 35,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIS",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -518,10 +559,11 @@ const coursesData = [
   },
   {
     id: 36,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIS",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -532,10 +574,11 @@ const coursesData = [
   },
   {
     id: 37,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "ATS",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -546,10 +589,11 @@ const coursesData = [
   },
   {
     id: 38,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "ATS",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -560,10 +604,11 @@ const coursesData = [
   },
   {
     id: 39,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "ATS",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -574,10 +619,11 @@ const coursesData = [
   },
   {
     id: 40,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "ATS",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -588,10 +634,11 @@ const coursesData = [
   },
   {
     id: 41,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "ATS",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -601,10 +648,11 @@ const coursesData = [
   },
   {
     id: 42,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "ATS",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -615,10 +663,11 @@ const coursesData = [
   },
   {
     id: 43,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIPM",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -629,10 +678,11 @@ const coursesData = [
   },
   {
     id: 44,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIPM",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -642,10 +692,11 @@ const coursesData = [
   },
   {
     id: 45,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIPM",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -655,10 +706,11 @@ const coursesData = [
   },
   {
     id: 46,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIPM",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -668,10 +720,11 @@ const coursesData = [
   },
   {
     id: 47,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIPM",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -682,10 +735,11 @@ const coursesData = [
   },
   {
     id: 48,
-    courseThumbnail: "./images/courseThumbnail.png",
+    courseThumbnail: "/images/courseThumbnail.png",
     courseTitle: "BA9 Fundamentals of Business Economics",
     courseType: "CIPM",
-    courseRating: "4.8 (150 reviews)",
+    courseRating: 4.8,
+    noOfReviews: 150,
     courseDesc:
       "What you’ll learn: Macroeconomic and Institutional Context of Business...",
     courseTags: [
@@ -700,7 +754,7 @@ const courseTabs = [
   {
     id: 0,
     name: "ICAN",
-    logo: "./images/icanlogo.svg",
+    logo: "/images/icanlogo.svg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     segments: [
       "Strategic Financial Management",
@@ -713,7 +767,7 @@ const courseTabs = [
   {
     id: 1,
     name: "ACCA",
-    logo: "./images/icanlogo.svg",
+    logo: "/images/icanlogo.svg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     segments: [
       "Financial Management",
@@ -726,7 +780,7 @@ const courseTabs = [
   {
     id: 2,
     name: "CFA",
-    logo: "./images/icanlogo.svg",
+    logo: "/images/icanlogo.svg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     segments: [
       "Economics",
@@ -739,7 +793,7 @@ const courseTabs = [
   {
     id: 3,
     name: "CIMA",
-    logo: "./images/icanlogo.svg",
+    logo: "/images/icanlogo.svg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     segments: [
       "Strategic Management",
@@ -752,7 +806,7 @@ const courseTabs = [
   {
     id: 4,
     name: "CITN",
-    logo: "./images/icanlogo.svg",
+    logo: "/images/icanlogo.svg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     segments: [
       "Tax Administration & Management",
@@ -765,7 +819,7 @@ const courseTabs = [
   {
     id: 5,
     name: "CIS",
-    logo: "./images/icanlogo.svg",
+    logo: "/images/icanlogo.svg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     segments: [
       "Derive Valuation & Analysis",
@@ -778,7 +832,7 @@ const courseTabs = [
   {
     id: 6,
     name: "ATS",
-    logo: "./images/icanlogo.svg",
+    logo: "/images/icanlogo.svg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     segments: [
       "Basic Accounting Processes & Systems",
@@ -791,7 +845,7 @@ const courseTabs = [
   {
     id: 7,
     name: "CIPM",
-    logo: "./images/icanlogo.svg",
+    logo: "/images/icanlogo.svg",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     segments: [
       "Operations Research",
@@ -808,21 +862,21 @@ const notifs = [
     id: 1,
     name: "John Do",
     date: "Mon, Feb 28",
-    avatar: "./images/avatar1.svg",
+    avatar: "/images/avatar1.svg",
     course: "Managing Finance in a Digital World",
   },
   {
     id: 2,
     name: "Mike Taylor",
     date: "Tue, Feb 21",
-    avatar: "./images/avatar1.svg",
+    avatar: "/images/avatar1.svg",
     course: "CIMA F1 Financial Reporting",
   },
   {
     id: 3,
     name: "Angela Taylor",
     date: "Tue, Feb 21",
-    avatar: "./images/avatar2.svg",
+    avatar: "/images/avatar2.svg",
     course: "CIMA E3 Strategic Management",
   },
 ];
@@ -873,8 +927,8 @@ const guideData = [
       "We've all experienced the chaos of multiple spreadsheets, tracking and insight tools...",
     posterName: "Natali C.",
     date: "14 Jan 2022",
-    banner: "./images/guidepic1.png",
-    avatar: "./images/guideavatar.svg",
+    banner: "/images/guidepic1.png",
+    avatar: "/images/guideavatar.svg",
   },
   {
     title:
@@ -883,8 +937,8 @@ const guideData = [
       "We've all experienced the chaos of multiple spreadsheets, tracking and insight tools...",
     posterName: "Natali C.",
     date: "14 Jan 2022",
-    banner: "./images/guidepic2.png",
-    avatar: "./images/guideavatar.svg",
+    banner: "/images/guidepic2.png",
+    avatar: "/images/guideavatar.svg",
   },
 ];
 

@@ -5,14 +5,13 @@ export default function Button({
   children,
   type,
   onClick = () => {},
-  width,
   height = 48,
 }) {
   return (
     <div
       onClick={onClick}
       className={`${styles.btn} ${styles[type]}`}
-      style={{ width: `${width}`, height: `${height}px` }}
+      style={{ width: "100%", height: `${height}px` }}
     >
       {children}
     </div>

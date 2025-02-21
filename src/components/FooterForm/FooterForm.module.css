@@ -44,3 +44,6 @@ select {
   top: 25%;
   right: 16px;
 }
+.btn {
+  width: 100%;
+}

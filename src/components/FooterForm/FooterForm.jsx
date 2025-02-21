@@ -31,9 +31,11 @@ export default function FooterForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <Button type="filled" width="100%">
-          <p>Get materials</p>
-        </Button>
+        <div className={styles.btn}>
+          <Button type="filled">
+            <p>Get materials</p>
+          </Button>
+        </div>
       </div>
     </form>
   );

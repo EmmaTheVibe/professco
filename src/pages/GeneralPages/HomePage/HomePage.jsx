@@ -26,11 +26,13 @@ export default function HomePage() {
             certification from top education providers (from around the world).
             Learn with Professco today!
           </p>
-          <NavLink to="/courses">
-            <Button type="filled" width="270px">
-              <p>Explore our courses</p>
-            </Button>
-          </NavLink>
+          <div className={styles.herobtn}>
+            <NavLink to="/courses">
+              <Button type="filled">
+                <p>Explore our courses</p>
+              </Button>
+            </NavLink>
+          </div>
         </div>
       </div>
 
@@ -150,11 +152,12 @@ export default function HomePage() {
               libero vitae erat.
             </p>
             <div className={styles.btnPackB}>
-              <Button type="filled" width="134px">
+              <Button type="filled">
                 <p>Get started</p>
               </Button>
+
               <NavLink to="/courses">
-                <Button type="bare" width="180px">
+                <Button type="bare">
                   <p>Explore courses</p>
                   <img
                     src={media.plus}
@@ -196,10 +199,10 @@ export default function HomePage() {
               Professco.
             </p>
             <div className={styles.btnPackB}>
-              <Button type="filled" width="134px">
+              <Button type="filled">
                 <p>Get started</p>
               </Button>
-              <Button type="bare" width="180px">
+              <Button type="bare">
                 <p>Learn more</p>
                 <img
                   src={media.plus}
@@ -232,9 +235,11 @@ export default function HomePage() {
           <p className={styles.txt}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
-          <Button width="147px" type="outlined">
-            <p>Contact us</p>
-          </Button>
+          <div className={styles.contactBtn}>
+            <Button type="outlined">
+              <p>Contact us</p>
+            </Button>
+          </div>
           <div className={styles.guides}>
             <div style={{ marginBottom: "16px" }}>
               <p style={{ marginBottom: "16px" }}>Learn</p>
@@ -246,9 +251,12 @@ export default function HomePage() {
                 proven track records
               </p>
             </div>
-            <Button type="outlined" width="141px">
-              <p>View all</p>
-            </Button>
+            <div className={styles.guidesBtn}>
+              <Button type="outlined">
+                <p>View all</p>
+              </Button>
+            </div>
+
             <div className={styles.guides}>
               {guideData.map((guide, index) => (
                 <GuideCard key={index} guide={guide} />

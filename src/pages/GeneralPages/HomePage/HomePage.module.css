@@ -6,6 +6,9 @@
   flex-direction: column;
   align-items: center;
 }
+.herobtn {
+  width: 270px;
+}
 .title {
   width: 300px;
   font-size: 48px;
@@ -106,6 +109,11 @@
   width: 276px;
   margin-bottom: 34px;
 }
+.btnPack {
+  width: 242px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
 
 .segC {
   background-color: #061223;
@@ -154,9 +162,10 @@
   margin-bottom: 42px;
 }
 .btnPackB {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  width: 320px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 .reviewGrid {
   width: 289px;
@@ -218,6 +227,10 @@
   width: 295px;
   margin-bottom: 24px;
 }
+.contactBtn {
+  width: 147px;
+}
+
 .guides {
   margin-top: 94px;
 }
@@ -227,4 +240,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 53px;
+}
+.guidesBtn {
+  width: 141px;
 }
