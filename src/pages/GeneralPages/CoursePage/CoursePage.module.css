@@ -14,7 +14,7 @@
 }
 .line p {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 0px;
 }
 .banner {
   width: 100%;
