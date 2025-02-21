@@ -28,19 +28,13 @@ export default function CoursePage() {
         <div className="container">
           <div className={styles.wrapper}>
             <div>
-              <div
-                style={{
-                  display: "flex",
-                  // height: "30px",
-                  alignItems: "center",
-                }}
-              >
+              <div className={styles.line}>
                 <p>Courses</p>
                 <img
                   src={media.arrowright}
                   alt="arrow"
                   style={{
-                    margin: "0 14px",
+                    margin: "0 8px",
                     // border: "1px solid red",
                     // width: "13.5px",
                     // height: "13.5px",
@@ -51,7 +45,7 @@ export default function CoursePage() {
                   src={media.arrowright}
                   alt="arrow"
                   style={{
-                    margin: "0 14px",
+                    margin: "0 8px",
                     // border: "1px solid red",
                     // width: "13.5px",
                     // height: "13.5px",
