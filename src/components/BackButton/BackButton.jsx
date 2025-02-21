@@ -1,4 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
+import { media } from "../../utils/data";
 
 function BackButton() {
   const navigate = useNavigate();
@@ -14,7 +15,17 @@ function BackButton() {
     }
   };
 
-  return <div onClick={handleBack}>Back</div>;
+  return (
+    <div onClick={handleBack} style={{ display: "flex", alignItems: "center" }}>
+      <img src={media.backArrow} alt="arrow" />
+      <p
+        className="semiboldFont"
+        style={{ color: "#9CA3AF", marginLeft: "12px" }}
+      >
+        Close
+      </p>
+    </div>
+  );
 }
 
 export default BackButton;

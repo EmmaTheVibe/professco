@@ -32,6 +32,11 @@ const media = {
   mail: "/images/sms.svg",
   location: "/images/location.svg",
   coursebanner: "/images/courseThumbnail2.png",
+  formIconMail: "/images/form-icon-mail.svg",
+  formIconVisibilityOff: "/images/form-icon-visibility-off.svg",
+  googleLogo: "/images/google-logo.svg",
+  bottombg: "/images/bottombg.svg",
+  backArrow: "/images/backarrow.svg",
 };
 
 const coursesData = [
