@@ -47,7 +47,7 @@ export default function CoursePage() {
                   alt="arrow"
                   style={{
                     margin: "0 8px",
-                    transform: "translateY(-0.7px)",
+                    transform: "translateY(-0.9px)",
                     // border: "1px solid red",
                     // width: "13.5px",
                     // height: "13.5px",
