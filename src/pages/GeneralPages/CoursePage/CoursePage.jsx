@@ -33,13 +33,13 @@ export default function CoursePage() {
                 <img
                   src={media.arrowright}
                   alt="arrow"
-                  style={{ margin: "0 14px", transform: "translateY(1px)" }}
+                  style={{ margin: "0 14px" }}
                 />
                 <p>{course.courseType}</p>
                 <img
                   src={media.arrowright}
                   alt="arrow"
-                  style={{ margin: "0 14px", transform: "translateY(0.3px)" }}
+                  style={{ margin: "0 14px" }}
                 />
                 <p className="semiboldFont">Fundamentals</p>
               </div>
