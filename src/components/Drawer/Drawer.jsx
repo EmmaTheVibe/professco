@@ -5,7 +5,12 @@ import SearchBar from "../SearchBar/SearchBar";
 import Button from "../Button/Button";
 import { media } from "../../utils/data";
 
-export default function Drawer({ openDrawer, setOpenDrawer }) {
+export default function Drawer({
+  openDrawer,
+  setOpenDrawer,
+  goToLogin,
+  goToSignup,
+}) {
   return (
     <div className={styles.drawer}>
       <SwipeableDrawer
@@ -55,11 +60,11 @@ export default function Drawer({ openDrawer, setOpenDrawer }) {
               </p>
             </div>
             <div className={styles.btnPack}>
-              <Button type="filled">
+              <Button type="filled" onClick={goToSignup}>
                 <p>Sign up</p>
               </Button>
 
-              <Button type="outlined">
+              <Button type="outlined" onClick={goToLogin}>
                 <p>Login</p>
               </Button>
             </div>
@@ -73,4 +78,6 @@ export default function Drawer({ openDrawer, setOpenDrawer }) {
 Drawer.propTypes = {
   openDrawer: PropTypes.bool.isRequired,
   setOpenDrawer: PropTypes.func.isRequired,
+  goToLogin: PropTypes.func.isRequired,
+  goToSignup: PropTypes.func.isRequired,
 };

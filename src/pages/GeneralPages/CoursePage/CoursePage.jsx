@@ -28,7 +28,7 @@ export default function CoursePage() {
         <div className="container">
           <div className={styles.wrapper}>
             <div>
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div style={{ display: "flex" }}>
                 <p>Courses</p>
                 <img
                   src={media.arrowright}
