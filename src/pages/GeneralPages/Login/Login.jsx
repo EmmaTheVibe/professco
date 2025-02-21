@@ -1,25 +1,23 @@
 import BackButton from "../../../components/BackButton/BackButton";
 import BottomBanner from "../../../components/BottomBanner/BottomBanner";
-import SignUpForm from "../../../components/SignUpForm/SignUpForm";
-import styles from "./SignUp.module.css";
+import LoginForm from "../../../components/LoginForm.jsx/LoginForm";
+import styles from "./Login.module.css";
 
-export default function SignUp() {
+export default function Login() {
   return (
-    <section className={styles.signup}>
+    <section className={styles.login}>
       <section className={styles.main}>
         <div className="container">
           <BackButton />
           <div className={styles.frame}>
             <div>
               <p style={{ color: "#4B5563" }}>Create account</p>
-              <h1 className="boldFont">
-                Awesome, let’s help you prepare for your exam
-              </h1>
-              <p className="lightFont">
+              <h1 className="boldFont">Hey, welcome back to professco</h1>
+              <p className={`lightFont ${styles.desc}`}>
                 We’ve got courses for every professional exam
               </p>
             </div>
-            <SignUpForm />
+            <LoginForm />
           </div>
         </div>
       </section>

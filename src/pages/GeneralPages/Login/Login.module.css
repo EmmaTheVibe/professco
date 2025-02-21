@@ -6,8 +6,12 @@
 .frame {
   margin-top: 26px;
 }
-.signup h1 {
+.login h1 {
   margin: 16px 0;
   font-size: 30px;
   line-height: 38px;
+  width: 295px;
+}
+.desc {
+  width: 282px;
 }

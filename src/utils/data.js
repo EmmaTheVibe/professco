@@ -970,6 +970,21 @@ const footerOptions = [
   { id: 8, name: "Lecture on Professco", section: "professco" },
 ];
 
+const articleText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+
+There’s no getting around it.
+Android accounts for 81.7% of all smartphones sold, but not all come packed with the very latest Android Nougat.
+That won’t worry you because after completing this course, the apps you build will perform brilliantly on Android Nougat or any older Android operating system.
+Now that’s something most courses don’t teach you!
+So, you want to be an Android 7 Nougat programmer?  Or you are interested in Android 8 Oreo?
+Well, I’m Tim Buchalka, one of your instructors, and I’ve designed the Android 7 Nougat App and Android 8 Orea Masterclass just for you!  Yes one, course covering both version!
+Choosing a course that’s perfect for you can be damn hard. You need Instructors:
+·      Who are passionate about what they do.
+·      Keep their courses continually updated.
+·      And most important, provide outstanding support and follow up to your questions.`;
+
 export {
   media,
   coursesData,
@@ -979,4 +994,5 @@ export {
   guideData,
   formOptions,
   footerOptions,
+  articleText,
 };
