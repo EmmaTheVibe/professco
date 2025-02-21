@@ -28,18 +28,34 @@ export default function CoursePage() {
         <div className="container">
           <div className={styles.wrapper}>
             <div>
-              <div style={{ display: "flex" }}>
+              <div
+                style={{
+                  display: "flex",
+                  height: "30px",
+                  alignItems: "center",
+                }}
+              >
                 <p>Courses</p>
                 <img
                   src={media.arrowright}
                   alt="arrow"
-                  style={{ margin: "0 14px" }}
+                  style={{
+                    margin: "0 14px",
+                    // border: "1px solid red",
+                    width: "13.5px",
+                    height: "13.5px",
+                  }}
                 />
                 <p>{course.courseType}</p>
                 <img
                   src={media.arrowright}
                   alt="arrow"
-                  style={{ margin: "0 14px" }}
+                  style={{
+                    margin: "0 14px",
+                    // border: "1px solid red",
+                    width: "13.5px",
+                    height: "13.5px",
+                  }}
                 />
                 <p className="semiboldFont">Fundamentals</p>
               </div>
