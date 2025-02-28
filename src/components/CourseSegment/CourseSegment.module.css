@@ -57,3 +57,15 @@
   background-color: #e65539;
   transition: all 0.3s ease;
 }
+
+@media screen and (min-width: 850px) {
+  .courseNav {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .courseNav {
+    justify-content: flex-start;
+  }
+}

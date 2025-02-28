@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  /* border-bottom: 1px solid #cbd5e1; */
 }
 
 .top,
@@ -15,8 +16,15 @@
   border-bottom: 1px solid #cbd5e1;
 }
 
+.divider {
+  background-color: #cbd5e1;
+  width: 100%;
+  height: 1px;
+}
+
 .wrapper {
-  padding: 36px 30px 56px;
+  padding: 36px 0 56px;
+  width: 320px;
 }
 .gridWrapper {
   padding: 36px 0 56px;
@@ -35,9 +43,8 @@
 }
 
 .courseGrid {
-  width: 288px;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 288px);
   gap: 20px;
 }
 
@@ -47,4 +54,113 @@
 
 .btn {
   width: 201px;
+}
+
+@media screen and (min-width: 500px) {
+}
+
+@media screen and (min-width: 600px) {
+  .wrapper {
+    width: 590px;
+  }
+  .courseGrid {
+    grid-template-columns: repeat(2, 288px);
+  }
+  .moreInfo {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .courseList {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 980px;
+  }
+  .divider {
+    width: 1px;
+    height: 100%;
+  }
+  .top {
+    width: 30%;
+    padding-right: 16px;
+  }
+  .wrapper {
+    width: unset;
+  }
+  .moreInfo {
+    width: unset;
+  }
+
+  .bottom {
+    width: 70%;
+  }
+  .border {
+    border-right: 1px solid #cbd5e1;
+    width: calc(30% + 0.5px);
+  }
+  .borderB {
+    border-left: 1px solid #cbd5e1;
+  }
+  .top,
+  .bottom {
+    border-bottom: none;
+  }
+  .gridWrapper {
+    align-items: start;
+  }
+  .courseGrid {
+    grid-template-columns: repeat(2, 288px);
+    width: 100%;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .courseList {
+    width: 1180px;
+  }
+  .top {
+    width: 35%;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+  .heading {
+    font-size: 36px;
+    line-height: 44px;
+    width: 317px;
+  }
+  .moreInfo {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 56px;
+    width: 317px;
+  }
+  .bottom {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .courseList {
+    width: 1380px;
+  }
+  .courseGrid {
+    grid-template-columns: repeat(3, 288px);
+    gap: 20px;
+  }
+
+  .top {
+    width: 30%;
+  }
+  .bottom {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1540px) {
+  .courseList {
+    width: 1519px;
+  }
 }

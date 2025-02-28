@@ -50,6 +50,14 @@
   color: #6b6f80;
   font-size: 14px;
   line-height: 20px;
+  display: -webkit-box;
+  width: 256px;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 .tags {
   display: flex;
@@ -74,4 +82,16 @@
 
 .btn {
   width: 256px;
+  height: 40px;
 }
+
+/* .truncate {
+  display: -webkit-box;
+  width: 250px;
+  line-clamp: 2;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; 
+} */

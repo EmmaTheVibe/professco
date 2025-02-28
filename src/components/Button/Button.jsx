@@ -1,18 +1,9 @@
 import styles from "./Button.module.css";
 import PropTypes from "prop-types";
 
-export default function Button({
-  children,
-  type,
-  onClick = () => {},
-  height = 48,
-}) {
+export default function Button({ children, type, onClick = () => {} }) {
   return (
-    <div
-      onClick={onClick}
-      className={`${styles.btn} ${styles[type]}`}
-      style={{ width: "100%", height: `${height}px` }}
-    >
+    <div onClick={onClick} className={`${styles.btn} ${styles[type]}`}>
       {children}
     </div>
   );

@@ -5,17 +5,27 @@ import { useParams } from "react-router-dom";
 import { coursesData, media } from "../../../utils/data";
 import Explore from "../../../components/Explore/Explore";
 import Rating from "../../../components/Rating/Rating";
-import Button from "../../../components/Button/Button";
 import CourseCard from "../../../components/CourseCard/CourseCard";
+import NotFoundPage from "../../NotFoundPage/NotFoundPage";
+import { useMediaQuery } from "@mui/material";
 
 export default function CoursePage() {
   const { type, name } = useParams();
+
+  const lg = useMediaQuery("(min-width: 600px)");
+  const lg2 = useMediaQuery("(min-width: 1400px)");
   //   const course = coursesData.find((course) => course.id === parseInt(id));
   const course = coursesData.find(
     (c) =>
       c.courseType.toLowerCase() === type.toLowerCase() &&
       c.courseTitle.toLowerCase() === name.toLowerCase()
   );
+
+  if (!course) {
+    return <NotFoundPage />;
+    // Alternatively, you could use a redirect:
+    // return <Navigate to="/not-found" />;
+  }
 
   const relatedCourses = coursesData.filter((c) =>
     c.courseType.includes(course.courseType)
@@ -69,9 +79,9 @@ export default function CoursePage() {
 
                 <Rating course={course} />
               </div>
-              <div className={styles.btn}>
-                <Button type="filled">Purchase course</Button>
-              </div>
+              <button className={`filled ${styles.btn}`}>
+                <p>Purchase course</p>
+              </button>
             </div>
             <img
               src={media.coursebanner}
@@ -83,15 +93,23 @@ export default function CoursePage() {
       </section>
       <section className={styles.segB}></section>
       <section className={styles.segC}>
-        <div className="container">
-          <h1 className="boldFont">Related courses</h1>
-          <p className={`lightFont ${styles.relatedInfo}`}>
-            Similar courses taken by others who are preparing for exams like you
-          </p>
-          <div className={styles.grid}>
-            {relatedCourses.slice(0, 3).map((course) => (
-              <CourseCard key={course.id} courseItem={course} />
-            ))}
+        <div className={`container ${styles.segCWrapper}`}>
+          <div className={styles.top}>
+            <h1 className="boldFont">Related courses</h1>
+            <p className={`lightFont ${styles.relatedInfo}`}>
+              Similar courses taken by others who are preparing for exams like
+              you
+            </p>
+          </div>
+
+          <div className={styles.bottom}>
+            <div className={styles.grid}>
+              {relatedCourses
+                .slice(0, `${lg2 ? 3 : lg ? 2 : 3}`)
+                .map((course) => (
+                  <CourseCard key={course.id} courseItem={course} />
+                ))}
+            </div>
           </div>
         </div>
       </section>

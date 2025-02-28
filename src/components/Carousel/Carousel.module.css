@@ -6,23 +6,25 @@
 }
 .carousel {
   width: 304px;
-  /* aspect-ratio: 1/1; */
-  overflow: hidden;
-  display: flex;
-  position: relative;
+  /* overflow: hidden; */
+  /* display: flex;
+  position: relative; */
   border-radius: 8px;
-  margin-bottom: 42px;
+  /* margin-bottom: 42px; */
+  /* gap: 10px; */
 }
 .card {
-  width: 100%;
-  display: block;
+  /* width: 100%; */
+  /* display: block; */
   flex-grow: 0;
   flex-shrink: 0;
-  transition: all 0.4s ease-in-out;
+  /* transition: all 0.4s ease-in-out; */
   border-radius: 8px;
+  margin: 0 0 20px;
 }
+
 .lecturer {
-  width: 304px;
+  width: 100%;
   height: 312px;
 }
 .cardInfo {
@@ -38,4 +40,28 @@
 }
 .activeDot {
   background-color: #1f2937;
+}
+
+@media screen and (min-width: 1000px) {
+  .carouselWrapper {
+    margin-top: 0;
+  }
+  .carousel {
+    width: calc(304px * 2);
+  }
+  .card {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .card {
+    width: unset;
+  }
+}
+
+@media screen and (min-width: 1540px) {
+  .carousel {
+    width: calc(304px * 3);
+  }
 }

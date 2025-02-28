@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <section className={styles.footer}>
-      <div className="container">
+      <div className={`container ${styles.frame}`}>
         <div className={`${styles.paperbox}`}>
           <img src={media.pagesthin} alt="pages" className={styles.pages} />
           <div className={`${styles.notifbox}`}>
@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
         <div className={styles.formbox}>
           <h1 className="boldFont">Free materials & resources</h1>
-          <p style={{ margin: "24px 0 16px" }}>
+          <p style={{ margin: "24px 0 16px" }} className={styles.formTxt}>
             Get free ebooks, PDFs, past questions and other resourecs to help
             you get started as you prepare for your exams
           </p>
@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.divider}></div>
-      <div className="container">
+      <div className={`container ${styles.frameB}`}>
         <div>
           <h1>Logo</h1>
           <p style={{ margin: "16px 0 32px" }} className={styles.txt}>

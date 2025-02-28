@@ -2,9 +2,9 @@ import styles from "./SearchBar.module.css";
 import { media } from "../../utils/data";
 import PropTypes from "prop-types";
 
-export default function SearchBar({ query, setQuery, width = "240px" }) {
+export default function SearchBar({ query, setQuery }) {
   return (
-    <div className={styles.searchbar} style={{ width: width }}>
+    <div className={styles.searchbar}>
       <img src={media.search} alt="search icon" />
       <input
         type="text"

@@ -1,13 +1,18 @@
 import { media } from "../../utils/data";
-import Button from "../Button/Button";
 import styles from "./SignUpForm.module.css";
 import { useState } from "react";
 
 export default function SignUpForm() {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
+  const [passwordVisibleB, setPasswordVisibleB] = useState(false);
+
   const toggleVisibility = () => {
     setPasswordVisible((prevState) => !prevState);
+  };
+
+  const toggleVisibilityB = () => {
+    setPasswordVisibleB((prevState) => !prevState);
   };
 
   return (
@@ -53,9 +58,32 @@ export default function SignUpForm() {
           />
         </div>
       </div>
-      <Button type="filled">
+      <div style={{ marginBottom: "26px" }}>
+        <p className={styles.label}>
+          Confirm Password <span>*</span>
+        </p>
+        <div
+          style={{
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <input
+            type={passwordVisibleB ? "text" : "password"}
+            id="confPassword"
+          />
+          <img
+            src={media.formIconVisibilityOff}
+            alt="icon"
+            onClick={toggleVisibilityB}
+            className={styles.icon}
+          />
+        </div>
+      </div>
+      <button className={`filled ${styles.submit}`}>
         <p>Create Professco Account</p>
-      </Button>
+      </button>
       <button className={styles.google}>
         <p className="semiboldFont">Use Google Instead</p>
         <img src={media.googleLogo} alt="logo" className={styles.logo} />

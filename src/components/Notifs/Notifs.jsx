@@ -35,19 +35,16 @@ export default function Notifs({ dark }) {
               <p
                 style={{
                   color: `${dark ? "#D1D5DB" : "#000000"}`,
-                  fontSize: "5.38px",
-                  lineHeight: "6.3px",
                 }}
-                className="semiboldFont"
+                className={`semiboldFont ${styles.name}`}
               >
                 {dark ? notif.course : notif.name}
               </p>
               <p
                 style={{
                   color: "#C6C6C6",
-                  fontSize: "4.61px",
-                  lineHeight: "5.4px",
                 }}
+                className={styles.date}
               >
                 {notif.date}
               </p>

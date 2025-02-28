@@ -13,3 +13,41 @@
   width: 263px;
   height: 256px;
 }
+
+@media screen and (min-width: 850px) {
+  .pic {
+    width: 100%;
+  }
+  .pic img {
+    width: 100%;
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .guideCard {
+    flex-direction: row;
+  }
+  .pic {
+    margin: 0;
+    height: 100%;
+    margin-right: 20px;
+  }
+  .pic img {
+    width: 170px;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .guideCard {
+    padding-right: 20px;
+  }
+  .pic {
+    height: unset;
+    margin-right: 16px;
+  }
+  .pic img {
+    width: 205px;
+    height: 256px;
+  }
+}

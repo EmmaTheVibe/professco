@@ -99,3 +99,110 @@ select:focus {
   font-size: 16px;
   line-height: 24px;
 }
+
+button {
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+}
+
+.filled {
+  background-color: #e65539;
+  color: #fff;
+  border: none;
+}
+
+.outlined {
+  background: none;
+  border: 1.6px solid #e65539;
+  color: #e65539;
+}
+
+.bare {
+  background: none;
+  border: none;
+  color: #e65539;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-dots {
+  position: relative !important;
+  bottom: unset !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center;
+}
+.slick-dots li {
+  margin: 0px !important;
+}
+.slick-dots li button::before {
+  transition: opacity 0.3s ease;
+}
+
+.slick-dots li.slick-active button::before {
+  transform: scale(1);
+}
+
+@media screen and (min-width: 400px) {
+  .container {
+    width: 340px;
+    /* border: 1px solid red; */
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .container {
+    width: 480px;
+    /* border: 1px solid red; */
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 590px;
+    /* border: 1px solid red; */
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .container {
+    width: 840px;
+    /* border: 1px solid red; */
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 980px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1180px;
+  }
+  button {
+    height: 56px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 1380px;
+  }
+}
+
+@media screen and (min-width: 1540px) {
+  .container {
+    width: 1519px;
+  }
+}

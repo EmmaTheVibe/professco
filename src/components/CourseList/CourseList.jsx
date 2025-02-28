@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Button from "../Button/Button";
 import CourseCard from "../CourseCard/CourseCard";
 import { coursesData } from "../../utils/data";
 import styles from "./CourseList.module.css";
@@ -7,16 +6,21 @@ import PropTypes from "prop-types";
 import SearchBar from "../SearchBar/SearchBar";
 import useContexts from "../../utils/useContexts";
 import { NavLink } from "react-router-dom";
+import { useMediaQuery } from "@mui/material";
 
 export default function CourseList({ showAll }) {
   const { activeTab } = useContexts();
   const [query, setQuery] = useState("");
 
+  const md = useMediaQuery("(min-width: 600px)");
+  const lg = useMediaQuery("(min-width: 1000px)");
+  const lg2 = useMediaQuery("(min-width: 1400px)");
+
   let filteredCourses = coursesData.filter((course) =>
     course.courseType.includes(activeTab.name)
   );
   if (!showAll) {
-    filteredCourses = filteredCourses.slice(0, 3);
+    filteredCourses = filteredCourses.slice(0, lg2 ? 3 : lg ? 2 : md ? 2 : 3);
   }
 
   const searchedCourses =
@@ -30,8 +34,13 @@ export default function CourseList({ showAll }) {
 
   return (
     <div className={styles.courseList}>
-      <div className={styles.top} style={{ borderBottom: showAll && "none" }}>
-        <div className={`container ${styles.wrapper}`}>
+      <div
+        className={`${styles.top} ${
+          searchedCourses.length === 0 ? styles.border : ""
+        }`}
+        style={{ borderBottom: showAll && "none" }}
+      >
+        <div className={styles.wrapper}>
           <p>Courses</p>
           <h1 className={styles.heading}>
             {activeTab.name} courses from the very best
@@ -43,9 +52,9 @@ export default function CourseList({ showAll }) {
           {!showAll ? (
             <NavLink to="/courses">
               <div className={styles.btn}>
-                <Button type="filled">
+                <button className="filled">
                   <p>View all</p>
-                </Button>
+                </button>
               </div>
             </NavLink>
           ) : (
@@ -53,9 +62,14 @@ export default function CourseList({ showAll }) {
           )}
         </div>
       </div>
-      <div className={styles.bottom}>
+      {/* <div className={styles.divider}></div> */}
+      <div
+        className={`${styles.bottom} ${
+          searchedCourses.length === 0 ? "" : styles.borderB
+        }`}
+      >
         <div
-          className={`container ${styles.gridWrapper}`}
+          className={styles.gridWrapper}
           style={{ paddingTop: showAll && "0" }}
         >
           {showAll ? (

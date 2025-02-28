@@ -7,16 +7,21 @@ function BackButton() {
 
   const handleBack = () => {
     if (location.state && location.state.from) {
-      // Navigate back to the page that directed you here
-      navigate(location.state.from);
+      navigate(-1);
+      // setTimeout(() => {
+      //   window.scrollTo(0, 0);
+      // }, 0);
     } else {
-      // Fallback to browser history if state is not available
       navigate("/");
     }
+    // navigate(-1);
   };
 
   return (
-    <div onClick={handleBack} style={{ display: "flex", alignItems: "center" }}>
+    <div
+      onClick={handleBack}
+      style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+    >
       <img src={media.backArrow} alt="arrow" />
       <p
         className="semiboldFont"

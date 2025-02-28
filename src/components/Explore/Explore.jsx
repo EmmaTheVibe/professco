@@ -5,21 +5,27 @@ import styles from "./Explore.module.css";
 export default function Explore() {
   return (
     <section className={styles.explore}>
-      <div className="container">
-        <p style={{ color: "#4B5563" }}>Available on Professco</p>
-        <h1 className="boldFont">Explore Professco</h1>
-        <p>
-          Learn from verified/certified Professionals in various fields with
-          high performance, accomplishments/reputation and proven track records.
-        </p>
-        <div className={styles.examGrid}>
-          {courseTabs.map((exam) => (
-            <ExamCard key={exam.id} exam={exam} />
-          ))}
+      <div className={`container ${styles.box}`}>
+        <div className={styles.top}>
+          <p style={{ color: "#4B5563" }}>Available on Professco</p>
+          <h1 className="boldFont">Explore Professco</h1>
+          <p className={styles.txt}>
+            Learn from verified/certified Professionals in various fields with
+            high performance, accomplishments/reputation and proven track
+            records.
+          </p>
+        </div>
+
+        <div className={styles.bottom}>
+          <div className={styles.examGrid}>
+            {courseTabs.map((exam) => (
+              <ExamCard key={exam.id} exam={exam} />
+            ))}
+          </div>
         </div>
       </div>
       <section className={styles.seg}>
-        <div className="container">
+        <div className={`container ${styles.boxB}`}>
           <h2 className="boldFont">
             Learn from vetted and certified chartered professionals with proven
             track records

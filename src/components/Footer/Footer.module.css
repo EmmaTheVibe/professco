@@ -6,16 +6,19 @@
 .paperbox {
   position: relative;
   margin-bottom: 126px;
+  width: 249.11px;
+  height: 165.73px;
+  /* width: fit-content; */
 }
 .notifbox {
   position: absolute;
   bottom: 0;
-  right: 50px;
+  right: -10px;
   z-index: 3;
 }
 .pages {
-  width: 249.11px;
-  height: 165.73px;
+  width: 100%;
+  height: 100%;
 }
 
 .divider {
@@ -63,4 +66,101 @@
   font-size: 18px;
   line-height: 21.09px;
   margin-bottom: 22px;
+}
+
+@media screen and (min-width: 600px) {
+  .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .paperbox {
+    width: 450px;
+    height: 330px;
+    margin: 0 50px 0 0;
+  }
+  .notifbox {
+    bottom: 38px;
+    right: 38px;
+  }
+  .formbox {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .frameB {
+    display: flex;
+    justify-content: space-between;
+  }
+  .table {
+    margin: 0;
+    width: 447px;
+  }
+  .txt {
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .footer {
+    padding: 80px 0 96px;
+  }
+  .frame {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .paperbox {
+    width: 450px;
+    height: 330px;
+    margin: 0 50px 0 0;
+  }
+  .notifbox {
+    bottom: 38px;
+    right: 38px;
+  }
+  .formbox {
+    width: 553px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .divider {
+    margin: 48px 0 90px;
+  }
+
+  .table {
+    width: 447px;
+  }
+  .txt {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .paperbox {
+    width: unset;
+    margin: 0 100px 0 0;
+  }
+  .pages {
+    width: 560.6px;
+    height: 372.97px;
+  }
+  .notifbox {
+    bottom: -20px;
+    right: 10px;
+  }
+  .formbox h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .formTxt {
+    width: 500px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .divider {
+    margin: 90px 0;
+  }
 }

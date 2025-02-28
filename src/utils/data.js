@@ -1,5 +1,6 @@
 const media = {
   logo: "/images/logo.svg",
+  logoPc: "/images/logo-pc.svg",
   search: "/images/search.svg",
   menu: "/images/menu.svg",
   closer: "/images/closer.svg",
@@ -37,6 +38,7 @@ const media = {
   googleLogo: "/images/google-logo.svg",
   bottombg: "/images/bottombg.svg",
   backArrow: "/images/backarrow.svg",
+  graduation: "/images/graduation.png",
 };
 
 const coursesData = [
@@ -48,7 +50,7 @@ const coursesData = [
     courseRating: 2.8,
     noOfReviews: 1,
     courseDesc:
-      "What you’ll learn: Microeconomic and Institutional Context of Business...",
+      "What you’ll learn: Microeconomic and Institutional Context of Business lorem loremwkdhcbdhjcbvjhsbscwhcbhbhcbjsxnjssnjsjxnsjxnsjnsj",
     courseTags: [
       { tagName: "Bestseller", tagColor: "#9FF9AF" },
       { tagName: "Special Offer", tagColor: "#CCC2FF" },

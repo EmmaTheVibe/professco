@@ -1,7 +1,6 @@
 import styles from "./CourseCard.module.css";
 import PropTypes from "prop-types";
 import { media } from "../../utils/data";
-import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 
 export default function CourseCard({ courseItem }) {
@@ -11,7 +10,7 @@ export default function CourseCard({ courseItem }) {
   const courseTitleUrl = courseItem.courseTitle.toLowerCase();
 
   const handleBtn = () => {
-    navigate(`/courses/${courseTypeUrl}/${courseTitleUrl}#${courseItem.id}`);
+    navigate(`/courses/${courseTypeUrl}/${courseItem.id}/${courseTitleUrl}`);
   };
 
   return (
@@ -35,7 +34,9 @@ export default function CourseCard({ courseItem }) {
             {courseItem.noOfReviews !== 1 && "s"})
           </p>
         </div>
-        <p className={styles.courseDesc}>{courseItem.courseDesc}</p>
+        <p className={`truncate ${styles.courseDesc}`}>
+          {courseItem.courseDesc}
+        </p>
         <div className={styles.tags}>
           {courseItem.courseTags.map((tag) => (
             <div
@@ -47,12 +48,11 @@ export default function CourseCard({ courseItem }) {
             </div>
           ))}
         </div>
-        <div className={styles.btn}>
-          <Button type="outlined" height="40" onClick={handleBtn}>
-            <p>Purchase course</p>{" "}
-            <img src={media.cart} alt="cart" className={styles.cart} />
-          </Button>
-        </div>
+
+        <button className={`outlined ${styles.btn}`} onClick={handleBtn}>
+          <p>Purchase course</p>
+          <img src={media.cart} alt="cart" className={styles.cart} />
+        </button>
       </div>
     </div>
   );

@@ -29,6 +29,9 @@ span {
   font-weight: 600;
   margin-bottom: 4px;
 }
+.submit {
+  height: 48px;
+}
 .google {
   border-radius: 4px;
   border: 1px solid #dcdee6;
@@ -46,4 +49,17 @@ span {
   font-size: 14px;
   line-height: 20px;
   margin-top: 26px;
+}
+
+@media screen and (min-width: 850px) {
+  .form {
+    width: 400px;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .form {
+    width: 328px;
+  }
 }

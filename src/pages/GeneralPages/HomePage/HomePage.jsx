@@ -1,4 +1,3 @@
-import Button from "../../../components/Button/Button";
 import Carousel from "../../../components/Carousel/Carousel";
 import CourseSegment from "../../../components/CourseSegment/CourseSegment";
 import HomeNav from "../../../components/HomeNav/HomeNav";
@@ -9,9 +8,11 @@ import styles from "./HomePage.module.css";
 import Faqs from "../../../components/Faqs/Faqs";
 import GuideCard from "../../../components/GuideCard/GuideCard";
 import Footer from "../../../components/Footer/Footer";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useMediaQuery } from "@mui/material";
 
 export default function HomePage() {
+  const lg = useMediaQuery("(min-width: 1540px)");
   return (
     <section className={styles.homepage}>
       <HomeNav />
@@ -26,12 +27,12 @@ export default function HomePage() {
             certification from top education providers (from around the world).
             Learn with Professco today!
           </p>
-          <div className={styles.herobtn}>
-            <NavLink to="/courses">
-              <Button type="filled">
+          <div>
+            <Link to="/courses">
+              <button className={`filled ${styles.herobtn}`}>
                 <p>Explore our courses</p>
-              </Button>
-            </NavLink>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -42,17 +43,20 @@ export default function HomePage() {
         <div className="container">
           <div className={styles.frame}>
             <h1 className="boldFont">
-              A professional learning platform <span>you can trust</span>
+              A professional learning platform <br /> <span>you can trust</span>
             </h1>
             <div className={styles.content}>
-              <h3 className="boldFont">
-                Verified lecturers with proven track record of success
-              </h3>
-              <p className={`lightFont ${styles.txt}`}>
-                Meet qualified professionals and instructors with expertise in
-                various fields, ready to provide you top-grade (or first -
-                class) tutoring/training.
-              </p>
+              <div className={styles.box}>
+                <h3 className="boldFont">
+                  Verified lecturers with proven track record of success
+                </h3>
+                <p className={`lightFont ${styles.txt}`}>
+                  Meet qualified professionals and instructors with expertise in
+                  various fields, ready to provide you top-grade (or first -
+                  class) tutoring/training.
+                </p>
+              </div>
+
               <div className={styles.wrapper}>
                 <img
                   src={media.lecturer1}
@@ -91,27 +95,18 @@ export default function HomePage() {
                 className={styles.pagesthick}
               />
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                flexDirection: "column",
-              }}
-            >
+            <div className={styles.boxB}>
               <h1 className="boldFont">Become certified</h1>
-              <p
-                style={{ textAlign: "center" }}
-                className={`lightFont ${styles.txt}`}
-              >
+              <p className={`lightFont ${styles.txt}`}>
                 Improve your resume, expand your abilities, start a new career
                 path by becoming a certified professional. Join us to start.
               </p>
               <div className={styles.btnPack}>
-                <Button type="filled">
+                <button className="filled">
                   <p>Get started</p>
-                </Button>
-                <NavLink to="/courses">
-                  <Button type="bare" width="242px">
+                </button>
+                <Link to="/courses">
+                  <button className="bare" width="242px">
                     <p>Explore courses</p>
                     <img
                       src={media.plus}
@@ -121,8 +116,8 @@ export default function HomePage() {
                         transform: "translateY(1px)",
                       }}
                     />
-                  </Button>
-                </NavLink>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -144,36 +139,55 @@ export default function HomePage() {
       <section className={styles.segD}>
         <div className={`container ${styles.segDWrapper}`}>
           <div className={styles.segDFrame}>
-            <h1 className="boldFont">What professionals like you are saying</h1>
-            <p className={`lightFont ${styles.txt}`}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
-            </p>
-            <div className={styles.btnPackB}>
-              <Button type="filled">
-                <p>Get started</p>
-              </Button>
+            <div className={styles.reviewHero}>
+              <h1 className="boldFont">
+                What professionals like you are saying
+              </h1>
+              <p className={`lightFont ${styles.txt}`}>
+                Very impressed about the quality of learning. It is properly
+                planned out with engaging and necessary materials from very well
+                practiced professionals. Glad to say I&apos;m now certified in
+                my field and now looking forward to taking more online classes
+              </p>
+              <div className={styles.btnPackB}>
+                <button className="filled">
+                  <p>Get started</p>
+                </button>
 
-              <NavLink to="/courses">
-                <Button type="bare">
-                  <p>Explore courses</p>
-                  <img
-                    src={media.plus}
-                    alt="plus"
-                    style={{
-                      marginLeft: "10px",
-                      transform: "translateY(1px)",
-                    }}
-                  />
-                </Button>
-              </NavLink>
+                <Link to="/courses">
+                  <button className="bare">
+                    <p>Explore courses</p>
+                    <img
+                      src={media.plus}
+                      alt="plus"
+                      style={{
+                        marginLeft: "10px",
+                        transform: "translateY(1px)",
+                      }}
+                    />
+                  </button>
+                </Link>
+              </div>
             </div>
-            <div className={styles.reviewGrid}>
-              {[...Array(4)].map((_, index) => (
-                <ReviewCard key={index} />
-              ))}
+
+            <div className={styles.reviewFrame}>
+              <div className={styles.reviewGrid}>
+                {[...Array(2)].map((_, index) => (
+                  <ReviewCard key={index} />
+                ))}
+              </div>
+              <div className={styles.reviewGridB}>
+                {[...Array(2)].map((_, index) => (
+                  <ReviewCard key={index} />
+                ))}
+              </div>
+              {lg && (
+                <div className={styles.reviewGrid}>
+                  {[...Array(2)].map((_, index) => (
+                    <ReviewCard key={index} />
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -192,28 +206,31 @@ export default function HomePage() {
         />
         <div className={`container ${styles.segEWrapper}`}>
           <div className={styles.segEFrame}>
-            <h1 className="boldFont">Lecture on Professco</h1>
-            <p className={`lightFont ${styles.txt}`}>
-              Join (thousands of) qualified professionals/instructors from all
-              over the world to teach (thousands/millions) of students on
-              Professco.
-            </p>
-            <div className={styles.btnPackB}>
-              <Button type="filled">
-                <p>Get started</p>
-              </Button>
-              <Button type="bare">
-                <p>Learn more</p>
-                <img
-                  src={media.plus}
-                  alt="plus"
-                  style={{
-                    marginLeft: "10px",
-                    transform: "translateY(1px)",
-                  }}
-                />
-              </Button>
+            <div className={styles.boxC}>
+              <h1 className="boldFont">Lecture on Professco</h1>
+              <p className={`lightFont ${styles.txt}`}>
+                Join (thousands of) qualified professionals/instructors from all
+                over the world to teach (thousands/millions) of students on
+                Professco.
+              </p>
+              <div className={styles.btnPackB}>
+                <button className="filled">
+                  <p>Get started</p>
+                </button>
+                <button className="bare">
+                  <p>Learn more</p>
+                  <img
+                    src={media.plus}
+                    alt="plus"
+                    style={{
+                      marginLeft: "10px",
+                      transform: "translateY(1px)",
+                    }}
+                  />
+                </button>
+              </div>
             </div>
+
             <Carousel />
           </div>
         </div>
@@ -224,46 +241,46 @@ export default function HomePage() {
           <h1 className="boldFont" style={{ marginBottom: "22px" }}>
             FAQs
           </h1>
-          <p className={styles.txt}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique.
-          </p>
+          <p className={styles.txt}>Search and get answers to your enquiries</p>
           <Faqs />
           <h1 className="boldFont" style={{ marginBottom: "16px" }}>
             Still have a question?
           </h1>
           <p className={styles.txt}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Click the button below to leave your questions
           </p>
-          <div className={styles.contactBtn}>
-            <Button type="outlined">
-              <p>Contact us</p>
-            </Button>
-          </div>
+          <button className={`outlined ${styles.contactBtn}`}>
+            <p>Contact us</p>
+          </button>
           <div className={styles.guides}>
-            <div style={{ marginBottom: "16px" }}>
-              <p style={{ marginBottom: "16px" }}>Learn</p>
-              <h2 className="boldFont" style={{ marginBottom: "16px" }}>
-                Guides and Resources to help you
-              </h2>
-              <p className="lightFont">
-                Learn from vetted and certified chartered professionals with
-                proven track records
-              </p>
-            </div>
-            <div className={styles.guidesBtn}>
-              <Button type="outlined">
+            <div className={styles.boxD}>
+              <div className={styles.segFFrame}>
+                <p style={{ marginBottom: "16px" }}>Learn</p>
+                <h2
+                  className={`boldFont ${styles.guidesHeading}`}
+                  style={{ marginBottom: "16px" }}
+                >
+                  Guides and Resources to help you
+                </h2>
+                <p className={`lightFont ${styles.guidesDesc}`}>
+                  Learn from vetted and certified chartered professionals with
+                  proven track records
+                </p>
+              </div>
+
+              <button className={`outlined ${styles.guidesBtn}`}>
                 <p>View all</p>
-              </Button>
+              </button>
             </div>
 
-            <div className={styles.guides}>
+            <div className={styles.guidesGrid}>
               {guideData.map((guide, index) => (
                 <GuideCard key={index} guide={guide} />
               ))}
             </div>
           </div>
         </div>
+        {/* <MultipleItems /> */}
       </section>
       <Footer />
     </section>

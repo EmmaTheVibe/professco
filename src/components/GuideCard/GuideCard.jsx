@@ -17,22 +17,26 @@ export default function GuideCard({ guide }) {
         <p style={{ color: "#6B7280", margin: "12px 0 29px" }}>
           {guide.content}
         </p>
-      </div>
-      <div style={{ display: "flex", width: "100%" }}>
-        <img src={guide.avatar} alt="avatar" style={{ marginRight: "12px" }} />
-        <div>
-          <p
-            className="semiboldFont"
-            style={{ color: "#344054", fontSize: "14px", lineHeight: "20px" }}
-          >
-            {guide.posterName}
-          </p>
-          <p
-            className="lightFont"
-            style={{ color: "#9CA3AF", fontSize: "14px", lineHeight: "20px" }}
-          >
-            {guide.date}
-          </p>
+        <div style={{ display: "flex", width: "100%" }}>
+          <img
+            src={guide.avatar}
+            alt="avatar"
+            style={{ marginRight: "12px" }}
+          />
+          <div>
+            <p
+              className="semiboldFont"
+              style={{ color: "#344054", fontSize: "14px", lineHeight: "20px" }}
+            >
+              {guide.posterName}
+            </p>
+            <p
+              className="lightFont"
+              style={{ color: "#9CA3AF", fontSize: "14px", lineHeight: "20px" }}
+            >
+              {guide.date}
+            </p>
+          </div>
         </div>
       </div>
     </div>

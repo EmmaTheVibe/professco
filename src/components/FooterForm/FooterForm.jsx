@@ -1,5 +1,4 @@
 import { formOptions, media } from "../../utils/data";
-import Button from "../Button/Button";
 import styles from "./FooterForm.module.css";
 import { useState } from "react";
 
@@ -24,18 +23,17 @@ export default function FooterForm() {
         </select>
       </div>
 
-      <div>
+      <div className={styles.frame}>
         <input
           type="email"
           placeholder="Your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <div className={styles.btn}>
-          <Button type="filled">
-            <p>Get materials</p>
-          </Button>
-        </div>
+
+        <button className={`filled ${styles.btn}`}>
+          <p>Get materials</p>
+        </button>
       </div>
     </form>
   );

@@ -1,10 +1,12 @@
 import styles from "./LoginForm.module.css";
 import { useState } from "react";
 import { media } from "../../utils/data";
-import Button from "../Button/Button";
+import useContexts from "../../utils/useContexts";
 
 export default function LoginForm() {
   const [passwordVisible, setPasswordVisible] = useState(false);
+
+  const { goToSignup } = useContexts();
 
   const toggleVisibility = () => {
     setPasswordVisible((prevState) => !prevState);
@@ -47,15 +49,15 @@ export default function LoginForm() {
           />
         </div>
       </div>
-      <Button type="filled">
+      <button className={`filled ${styles.submit}`}>
         <p>Login</p>
-      </Button>
+      </button>
       <button className={styles.google}>
         <p className="semiboldFont">Use Google Instead</p>
         <img src={media.googleLogo} alt="logo" className={styles.logo} />
       </button>
       <p className={styles.txt}>
-        Don’t have an account, create one <span>here</span>
+        Don’t have an account, create one <span onClick={goToSignup}>here</span>
       </p>
     </form>
   );

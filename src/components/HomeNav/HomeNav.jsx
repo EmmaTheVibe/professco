@@ -5,22 +5,13 @@ import SearchBar from "../SearchBar/SearchBar";
 import { NavLink } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Drawer from "../Drawer/Drawer";
-import { useNavigate, useLocation } from "react-router-dom";
+import useContexts from "../../utils/useContexts";
 
 export default function HomeNav() {
-  const lg = useMediaQuery("(min-width: 768px)");
+  const lg = useMediaQuery("(min-width: 1000px)");
   const [openDrawer, setOpenDrawer] = useState(false);
 
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const goToLogin = () => {
-    navigate("/login", { state: { from: location.pathname } });
-  };
-
-  const goToSignup = () => {
-    navigate("/signup", { state: { from: location.pathname } });
-  };
+  const { goToSignup, goToLogin } = useContexts();
 
   const toggleDrawer = (event) => {
     if (
@@ -36,20 +27,44 @@ export default function HomeNav() {
   };
   return (
     <nav>
-      <Drawer
-        openDrawer={openDrawer}
-        setOpenDrawer={setOpenDrawer}
-        toggleDrawer={toggleDrawer}
-        goToLogin={goToLogin}
-        goToSignup={goToSignup}
-      />
-      <div className="container">
+      {!lg && (
+        <Drawer
+          openDrawer={openDrawer}
+          setOpenDrawer={setOpenDrawer}
+          toggleDrawer={toggleDrawer}
+        />
+      )}
+      <div className={`container ${styles.wrapper}`}>
         <div className={styles.homenav}>
-          <NavLink to="/">
-            <img src={media.logo} alt="logo" className={styles.logo} />
-          </NavLink>
-          <SearchBar />
-          <img src={media.menu} alt="menu" onClick={toggleDrawer} />
+          {!lg && (
+            <NavLink to="/">
+              <img src={media.logo} alt="logo" className={styles.logo} />
+            </NavLink>
+          )}
+          <div className={styles.frame}>
+            <SearchBar />
+          </div>
+          {lg && (
+            <NavLink to="/">
+              <img src={media.logoPc} alt="logo" className={styles.logoPc} />
+            </NavLink>
+          )}
+          {lg ? (
+            <div className={styles.box}>
+              <div className={styles.txtBox}>
+                <p>Why Professco</p>
+                <p>Learn</p>
+              </div>
+              <button className="filled" onClick={goToSignup}>
+                <p>Sign up</p>
+              </button>
+              <button className="outlined" onClick={goToLogin}>
+                <p>Login</p>
+              </button>
+            </div>
+          ) : (
+            <img src={media.menu} alt="menu" onClick={toggleDrawer} />
+          )}
         </div>
       </div>
     </nav>

@@ -15,6 +15,7 @@
   justify-content: space-between;
   align-items: center;
   padding-right: 11px;
+  cursor: pointer;
 }
 
 .answer {
@@ -31,4 +32,28 @@
 }
 .accordionItem.open img {
   transform: rotate(180deg);
+}
+
+@media screen and (min-width: 400px) {
+  .accordion {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .accordion {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .accordion {
+    width: 900px;
+  }
+}
+
+@media screen and (min-width: 1540px) {
+  .accordion {
+    width: 1042px;
+  }
 }
