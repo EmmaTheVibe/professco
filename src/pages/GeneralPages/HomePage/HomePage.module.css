@@ -497,11 +497,12 @@
   }
   .segDFrame {
     flex-direction: row;
+    align-items: flex-start;
   }
   .reviewFrame {
     flex-direction: row;
     gap: 12px;
-    margin-left: 66px;
+    margin: 0 0 0 66px;
   }
   .reviewHero {
     align-items: flex-start;
@@ -526,7 +527,7 @@
     justify-content: space-evenly;
   }
   .boxC {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     padding-right: 22px;
   }
 
@@ -613,6 +614,7 @@
   .segDFrame h1 {
     font-size: 48px;
     line-height: 60px;
+    width: 450px;
   }
   .segDFrame .txt {
     font-size: 18px;
