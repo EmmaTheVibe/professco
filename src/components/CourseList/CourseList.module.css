@@ -49,7 +49,10 @@
 }
 
 .filterBox {
-  margin-bottom: 79px;
+  margin-bottom: 70px;
+}
+.searchbox {
+  margin-bottom: 12px;
 }
 
 .btn {
@@ -106,6 +109,9 @@
   .top,
   .bottom {
     border-bottom: none;
+  }
+  .filterBox {
+    margin: 40px 0;
   }
   .gridWrapper {
     align-items: start;

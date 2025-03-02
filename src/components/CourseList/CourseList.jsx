@@ -74,8 +74,8 @@ export default function CourseList({ showAll }) {
         >
           {showAll ? (
             <div className={styles.filterBox}>
-              <div style={{ marginBottom: "12px" }}>
-                <SearchBar query={query} setQuery={setQuery} width="288px" />
+              <div className={styles.searchbox}>
+                <SearchBar query={query} setQuery={setQuery} />
               </div>
 
               {query.length > 0 ? (
