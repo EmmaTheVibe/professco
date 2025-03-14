@@ -3,6 +3,9 @@
   padding: 96px 0;
   color: #f9fafb;
 }
+.footer a {
+  color: #f9fafb;
+}
 .paperbox {
   position: relative;
   margin-bottom: 126px;

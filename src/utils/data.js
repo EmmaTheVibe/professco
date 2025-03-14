@@ -964,15 +964,15 @@ const formOptions = [
   { id: 8, name: "CIPM" },
 ];
 const footerOptions = [
-  { id: 0, name: "Blog", section: "learn" },
-  { id: 1, name: "Community", section: "learn" },
-  { id: 2, name: "Resources and materials", section: "learn" },
-  { id: 3, name: "About us", section: "professco" },
-  { id: 4, name: "Contact us", section: "professco" },
-  { id: 5, name: "Privacy Policy", section: "professco" },
-  { id: 6, name: "Sitemap", section: "professco" },
-  { id: 7, name: "Terms of use", section: "professco" },
-  { id: 8, name: "Lecture on Professco", section: "professco" },
+  { id: 0, name: "Blog", section: "learn", to: "/" },
+  { id: 1, name: "Community", section: "learn", to: "/" },
+  { id: 2, name: "Resources and materials", section: "learn", to: "/" },
+  { id: 3, name: "About us", section: "professco", to: "/" },
+  { id: 4, name: "Contact us", section: "professco", to: "/contact" },
+  { id: 5, name: "Privacy Policy", section: "professco", to: "/" },
+  { id: 6, name: "Sitemap", section: "professco", to: "/" },
+  { id: 7, name: "Terms of use", section: "professco", to: "/terms" },
+  { id: 8, name: "Lecture on Professco", section: "professco", to: "/" },
 ];
 
 const articleText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
