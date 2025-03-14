@@ -249,9 +249,11 @@ export default function HomePage() {
           <p className={styles.txt}>
             Click the button below to leave your questions
           </p>
-          <button className={`outlined ${styles.contactBtn}`}>
-            <p>Contact us</p>
-          </button>
+          <Link to="/contact">
+            <button className={`outlined ${styles.contactBtn}`}>
+              <p>Contact us</p>
+            </button>
+          </Link>
           <div className={styles.guides}>
             <div className={styles.boxD}>
               <div className={styles.segFFrame}>

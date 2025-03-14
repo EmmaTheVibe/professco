@@ -9,6 +9,8 @@ import CoursePage from "./pages/GeneralPages/CoursePage/CoursePage.jsx";
 import SignUp from "./pages/GeneralPages/SignUp/SignUp.jsx";
 import Login from "./pages/GeneralPages/Login/Login.jsx";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage.jsx";
+import ContactPage from "./pages/GeneralPages/ContactPage/ContactPage.jsx";
+import TermsPage from "./pages/GeneralPages/TermsPage/TermsPage.jsx";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
             <Route path="/courses/:type/:id/:name" element={<CoursePage />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/terms" element={<TermsPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </ContextProvider>

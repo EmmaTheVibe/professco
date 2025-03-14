@@ -39,6 +39,9 @@ const media = {
   bottombg: "/images/bottombg.svg",
   backArrow: "/images/backarrow.svg",
   graduation: "/images/graduation.png",
+  call: "/images/call.svg",
+  visit: "/images/visit.svg",
+  chat: "/images/chat.svg",
 };
 
 const coursesData = [
