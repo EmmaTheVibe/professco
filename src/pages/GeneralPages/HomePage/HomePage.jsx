@@ -1,7 +1,6 @@
 import Carousel from "../../../components/Carousel/Carousel";
 import CourseSegment from "../../../components/CourseSegment/CourseSegment";
 import HomeNav from "../../../components/HomeNav/HomeNav";
-import Notifs from "../../../components/Notifs/Notifs";
 import ReviewCard from "../../../components/ReviewCard/ReviewCard";
 import { guideData, media } from "../../../utils/data";
 import styles from "./HomePage.module.css";
@@ -10,6 +9,7 @@ import GuideCard from "../../../components/GuideCard/GuideCard";
 import Footer from "../../../components/Footer/Footer";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@mui/material";
+import Segment from "../../../components/Segment/Segment";
 
 export default function HomePage() {
   const lg = useMediaQuery("(min-width: 1540px)");
@@ -39,7 +39,7 @@ export default function HomePage() {
 
       <CourseSegment />
 
-      <section className={styles.seg}>
+      {/* <section className={styles.seg}>
         <div className="container">
           <div className={styles.frame}>
             <h1 className="boldFont">
@@ -71,7 +71,9 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <Segment />
 
       <section className={styles.segB}>
         <div className="container">
@@ -102,9 +104,11 @@ export default function HomePage() {
                 path by becoming a certified professional. Join us to start.
               </p>
               <div className={styles.btnPack}>
-                <button className="filled">
-                  <p>Get started</p>
-                </button>
+                <Link to="getstarted">
+                  <button className="filled">
+                    <p>Get started</p>
+                  </button>
+                </Link>
                 <Link to="/courses">
                   <button className="bare" width="242px">
                     <p>Explore courses</p>

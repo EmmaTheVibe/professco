@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { courseTabs, media, footerOptions } from "../../utils/data";
+import { examTabs, media, footerOptions } from "../../utils/data";
 import FooterForm from "../FooterForm/FooterForm";
 import Notifs from "../Notifs/Notifs";
 import styles from "./Footer.module.css";
@@ -55,7 +55,7 @@ export default function Footer() {
         <div className={styles.table}>
           <div className={styles.column}>
             <p className={`boldFont ${styles.tabHead}`}>Exams</p>
-            {courseTabs.map((tab) => (
+            {examTabs.map((tab) => (
               <p key={tab.id} className={styles.tab}>
                 {tab.name}
               </p>

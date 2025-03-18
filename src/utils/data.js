@@ -42,6 +42,18 @@ const media = {
   call: "/images/call.svg",
   visit: "/images/visit.svg",
   chat: "/images/chat.svg",
+  examCardTick: "/images/examcard-tick.svg",
+  verified: "/images/verified.svg",
+  reliable: "/images/reliable.svg",
+  flexible: "/images/flexible.svg",
+  aboutMobile1: "/images/about-mobile-1.png",
+  aboutMobile2: "/images/about-mobile-2.png",
+  aboutMobile3: "/images/about-mobile-3.png",
+  aboutPC1: "/images/about-pc-1.png",
+  aboutPC2: "/images/about-pc-2.png",
+  aboutPC3: "/images/about-pc-3.png",
+  sparkles: "/images/sparkles.svg",
+  aboutTick: "/images/about-tick.svg",
 };
 
 const coursesData = [
@@ -760,12 +772,12 @@ const coursesData = [
   },
 ];
 
-const courseTabs = [
+const examTabs = [
   {
     id: 0,
     name: "ICAN",
     logo: "/images/icanlogo.svg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Insitute of Chartered Accountants of Nigeria",
     segments: [
       "Strategic Financial Management",
       "Advanced Audit & Assurance",
@@ -777,8 +789,8 @@ const courseTabs = [
   {
     id: 1,
     name: "ACCA",
-    logo: "/images/icanlogo.svg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    logo: "/images/acca-logo.svg",
+    description: "Association of Chartered Certified Accountants",
     segments: [
       "Financial Management",
       "Accounting Law",
@@ -790,8 +802,8 @@ const courseTabs = [
   {
     id: 2,
     name: "CFA",
-    logo: "/images/icanlogo.svg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    logo: "/images/cfa-logo.svg",
+    description: "Chartered Financial Analysis",
     segments: [
       "Economics",
       "Corporate Issuers",
@@ -803,8 +815,8 @@ const courseTabs = [
   {
     id: 3,
     name: "CIMA",
-    logo: "/images/icanlogo.svg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    logo: "/images/cima-logo.svg",
+    description: "Chartered Institute of Management Accountants",
     segments: [
       "Strategic Management",
       "Risk Management",
@@ -816,8 +828,8 @@ const courseTabs = [
   {
     id: 4,
     name: "CITN",
-    logo: "/images/icanlogo.svg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    logo: "/images/citn-logo.svg",
+    description: "Chartered Institute of Taxation Nigeria",
     segments: [
       "Tax Administration & Management",
       "Tax Audit & Investigation",
@@ -829,8 +841,8 @@ const courseTabs = [
   {
     id: 5,
     name: "CIS",
-    logo: "/images/icanlogo.svg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    logo: "/images/cis-logo.svg",
+    description: "Chartered Institute of Stockbrokers",
     segments: [
       "Derive Valuation & Analysis",
       "Portfolio Management",
@@ -855,8 +867,8 @@ const courseTabs = [
   {
     id: 7,
     name: "CIPM",
-    logo: "/images/icanlogo.svg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    logo: "/images/cipm-logo.svg",
+    description: "Cerificate in Investment Performance Measurement.",
     segments: [
       "Operations Research",
       "Advanced Human Resource Management",
@@ -967,7 +979,7 @@ const footerOptions = [
   { id: 0, name: "Blog", section: "learn", to: "/" },
   { id: 1, name: "Community", section: "learn", to: "/" },
   { id: 2, name: "Resources and materials", section: "learn", to: "/" },
-  { id: 3, name: "About us", section: "professco", to: "/" },
+  { id: 3, name: "About us", section: "professco", to: "/about" },
   { id: 4, name: "Contact us", section: "professco", to: "/contact" },
   { id: 5, name: "Privacy Policy", section: "professco", to: "/" },
   { id: 6, name: "Sitemap", section: "professco", to: "/" },
@@ -993,7 +1005,7 @@ Choosing a course that’s perfect for you can be damn hard. You need Instructor
 export {
   media,
   coursesData,
-  courseTabs,
+  examTabs,
   notifs,
   faqs,
   guideData,

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import styles from "./CourseSegment.module.css";
-import { courseTabs } from "../../utils/data";
+import { examTabs } from "../../utils/data";
 import CourseList from "../CourseList/CourseList";
 import PropTypes from "prop-types";
 import useContexts from "../../utils/useContexts";
@@ -29,7 +29,7 @@ export default function CourseSegment({ showAll = false }) {
         <div className="container">
           <div className={styles.courseNav}>
             <ul className={styles.tabs}>
-              {courseTabs.map((tab, index) => (
+              {examTabs.map((tab, index) => (
                 <li
                   key={tab.id}
                   className={` semiboldFont ${styles.tabItem} ${

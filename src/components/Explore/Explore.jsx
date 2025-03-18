@@ -1,4 +1,5 @@
-import { courseTabs } from "../../utils/data";
+import { examTabs } from "../../utils/data";
+
 import ExamCard from "../ExamCard/ExamCard";
 import styles from "./Explore.module.css";
 
@@ -18,8 +19,12 @@ export default function Explore() {
 
         <div className={styles.bottom}>
           <div className={styles.examGrid}>
-            {courseTabs.map((exam) => (
-              <ExamCard key={exam.id} exam={exam} />
+            {examTabs.map((exam) => (
+              <ExamCard
+                key={exam.id}
+                exam={exam}
+                // selectable={true}
+              />
             ))}
           </div>
         </div>
@@ -31,7 +36,7 @@ export default function Explore() {
             track records
           </h2>
           <div className={styles.segGrid}>
-            {courseTabs.map((exam) => (
+            {examTabs.map((exam) => (
               <div key={exam.id}>
                 <p className={`boldFont ${styles.heading}`}>{exam.name}</p>
                 {exam.segments.map((segment, index) => (

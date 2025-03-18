@@ -1,15 +1,29 @@
 import { createContext, useState } from "react";
-import { courseTabs } from "./data";
+import { examTabs } from "./data";
 import PropTypes from "prop-types";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const ContextCreator = createContext();
 
 function ContextProvider({ children }) {
-  const [activeTab, setActiveTab] = useState(courseTabs[0]);
+  const [activeTab, setActiveTab] = useState(examTabs[0]);
+  const [examTypeList, setExamTypeList] = useState([]);
 
   const navigate = useNavigate();
   const location = useLocation();
+
+  function addExamType(name, selectable) {
+    if (!selectable) return;
+    setExamTypeList((prevList) =>
+      prevList.includes(name)
+        ? prevList.filter((item) => item !== name)
+        : [...prevList, name]
+    );
+  }
+
+  // useEffect(() => {
+  //   console.log(examTypeList);
+  // }, [examTypeList]);
 
   const goToLogin = () => {
     navigate("/login", { state: { from: location.pathname } });
@@ -26,6 +40,9 @@ function ContextProvider({ children }) {
         setActiveTab: setActiveTab,
         goToLogin: goToLogin,
         goToSignup: goToSignup,
+        examTypeList: examTypeList,
+        setExamTypeList: setExamTypeList,
+        addExamType: addExamType,
       }}
     >
       {children}
