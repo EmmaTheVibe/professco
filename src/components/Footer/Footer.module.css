@@ -6,6 +6,9 @@
 .footer a {
   color: #f9fafb;
 }
+.footer a:hover {
+  text-decoration: underline;
+}
 .paperbox {
   position: relative;
   margin-bottom: 126px;

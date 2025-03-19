@@ -11,12 +11,30 @@ export default function CourseSegment({ showAll = false }) {
   const sliderRef = useRef(null);
   const navRefs = useRef([]);
 
+  // useEffect(() => {
+  //   const activeNavItem = navRefs.current[activeTab.id];
+  //   if (activeNavItem && sliderRef.current) {
+  //     sliderRef.current.style.width = `${activeNavItem.offsetWidth}px`;
+  //     sliderRef.current.style.left = `${activeNavItem.offsetLeft}px`;
+  //   }
+  // }, [activeTab]);
+
   useEffect(() => {
-    const activeNavItem = navRefs.current[activeTab.id];
-    if (activeNavItem && sliderRef.current) {
-      sliderRef.current.style.width = `${activeNavItem.offsetWidth}px`;
-      sliderRef.current.style.left = `${activeNavItem.offsetLeft}px`;
-    }
+    const updateSliderPosition = () => {
+      const activeNavItem = navRefs.current[activeTab.id];
+      if (activeNavItem && sliderRef.current) {
+        sliderRef.current.style.width = `${activeNavItem.offsetWidth}px`;
+        sliderRef.current.style.left = `${activeNavItem.offsetLeft}px`;
+      }
+    };
+
+    updateSliderPosition();
+
+    window.addEventListener("resize", updateSliderPosition);
+
+    return () => {
+      window.removeEventListener("resize", updateSliderPosition);
+    };
   }, [activeTab]);
 
   const handleClick = (tab) => {
